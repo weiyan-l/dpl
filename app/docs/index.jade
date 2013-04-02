@@ -1,0 +1,19 @@
+!!! 5
+//if lt IE 7
+    html(class="no-js ie6 oldie", lang="en")
+//if IE 7
+    html(class="no-js ie7 oldie", lang="en")
+//if IE 8
+    html(class="no-js ie8 oldie", lang="en")
+// [if gt IE 8] <!
+html(class="no-js", lang="en")
+    // <![endif]
+  head
+    title="pageTitle"
+  body
+    h1 Jade - node template engine
+    #container
+      if true
+        p You are amazing
+      else
+        p Get on it!
