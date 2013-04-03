@@ -1,6 +1,6 @@
 {
-  "name": "jquery",
-  "version": "0.0.0",
+  "name": "aliyun dpl",
+  "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.0",

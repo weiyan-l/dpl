@@ -1,0 +1,15 @@
+!!! 5
+//if lt IE 7
+    html(class="no-js ie6 oldie", lang="zh-cn")
+//if IE 7
+    html(class="no-js ie7 oldie", lang="zh-cn")
+//if IE 8
+    html(class="no-js ie8 oldie", lang="zh-cn")
+// [if gt IE 8] <!
+html(class="no-js", lang="zh-cn")
+    // <![endif]
+  head
+    block title
+    link(rel='stylesheet', href='../styles/aliyun.css')
+  body
+    block content

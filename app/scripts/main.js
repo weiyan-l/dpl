@@ -1,1 +1,1 @@
-console.log('helloss');
+window.console.log(44);
