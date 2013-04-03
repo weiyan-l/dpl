@@ -25,9 +25,9 @@ module.exports = function(grunt) {
             },
             livereload: {
                 files: [
-                    '{.tmp,app}/styles/{,*/}*.css',
-                    '{.tmp,app}/scripts/{,*/}*.js',
-                    '{.tmp,app}/images/{,*/}*.{png,jpg,jpeg,webp}'],
+                    '{.tmp,app,app/docs}/styles/{,*/}*.css',
+                    '{.tmp,app,app/docs}/scripts/{,*/}*.js',
+                    '{.tmp,app,app/docs}/images/{,*/}*.{png,jpg,jpeg,webp}'],
                 tasks: ['livereload']
             }
         },
@@ -151,32 +151,30 @@ module.exports = function(grunt) {
             debug: {
                 files: [{
                     expand: true,
-                    cwd: 'app/images/',
-                    src: ['**'],
-                    dest: '.tmp/images'
-                }, // makes all src relative to cwd
+                    cwd: 'app',
+                    src: ['images/*','scripts/*'],
+                    dest: '.tmp/'
+                },
                 {
                     expand: true,
-                    cwd: 'app/scripts/',
-                    src: ['**'],
-                    dest: '.tmp/scripts'
-                } // flattens
-                ]
+                    cwd: 'app/docs',
+                    src: ['images/*','scripts/*','styles/*'],
+                    dest: '.tmp/docs'
+                }]
             },
             dist: {
                 files: [{
                     expand: true,
-                    cwd: 'app/images/',
-                    src: ['**'],
-                    dest: 'dist/images'
-                }, // makes all src relative to cwd
+                    cwd: 'app',
+                    src: ['images/*','scripts/*'],
+                    dest: '.dist/'
+                },
                 {
                     expand: true,
-                    cwd: 'app/scripts/',
-                    src: ['**'],
-                    dest: 'dist/scripts'
-                } // flattens
-                ]
+                    cwd: 'app/docs',
+                    src: ['images/*','scripts/*','styles/*'],
+                    dest: '.dist/docs'
+                }]
             }
         }
     });
