@@ -1,4 +1,20 @@
+body{
+	background:url(../images/body_bg.png);
+}
 .navbar{
-	height:54px;
-	background: #000;
+	height:55px;
+	line-height:55px; 
+	background: #000 url(../images/header_bg.png);
+}
+nav{
+	float:right;
+}
+li{
+	float:left;
+	height:55px;
+	line-height:55px; 
+	color:#a8a8a8;
+	list-style:none;
+	width:100px;
+	text-align:center;
 }

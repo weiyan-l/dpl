@@ -20,14 +20,17 @@ module.exports = function(grunt) {
                 tasks: ['jade:debug']
             },
             copy: {
-                files: ['app/scripts/{,*/}*.js', 'app/images/{,*/}*.{png,jpg,jpeg,webp}'],
+                files: [
+                    'app/{,*/}/styles/{,*/}*.css',
+                    'app/{,*/}/scripts/{,*/}*.js',
+                    'app/{,*/}/images/{,*/}*.{png,jpg,jpeg,webp}'],
                 tasks: ['copy:debug']
             },
             livereload: {
                 files: [
-                    '{.tmp,app,app/docs}/styles/{,*/}*.css',
-                    '{.tmp,app,app/docs}/scripts/{,*/}*.js',
-                    '{.tmp,app,app/docs}/images/{,*/}*.{png,jpg,jpeg,webp}'],
+                    'app/{,*/}/styles/{,*/}*.css',
+                    'app/{,*/}/scripts/{,*/}*.js',
+                    'app/{,*/}/images/{,*/}*.{png,jpg,jpeg,webp}'],
                 tasks: ['livereload']
             }
         },
